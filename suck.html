@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>nyan cat</title>
+        <script type="text/javascript">
+            function setPic1()
+            {
+                pic.src = "sincerely.png";
+            }
+
+            function setPic2()
+            {
+                pic1.src = "real_life_mona_lisa.webp";
+            }
+
+            function countCh()
+            {
+                var pElement = document.getElementsByTagName("p");
+
+                if (pElement[0] === null) {
+                    var div1 = document.getElementById("div1");
+                    div1.innerHTML += "<p></p>"
+                    pElement = document.getElementByTagName("p");
+                }
+                var counter = pElement[0].innerHTML;
+                counter++;
+                pElement[0].innerHTML = counter;
+            }
+
+            function changeBg() {
+                var newColor = document.myForm.newColor.value;
+                document.body.style.backgroundColor = newColor;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src = "sincerely.png" height="50px" width="auto" name="pic" onmouseover="setPic2()" onmouseout="setPic1()"/>
+            <img src = "real_life_mona_lisa.webp" height="70px" width="auto" name="pic1" onmouseover="setPic1()" onmouseout="setPic2()"/>
+        </div>
+
+        <div id="div1">
+            <form name="myForm">
+                Enter COLOR <input type="text" name="newColor" id="newColor" onchange="countCh()"/>
+                <br/>
+                <button type="button" onclick="changeBg()">Pa</button>
+            </form>
+        </div>
+    </body>
+</html>
