@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>bald if reading</title>
+    <style>
+        div{
+            font-size: 40px;
+        }
+    </style>
+    <script type="text/javascript">
+        var sman = document.createElement("img");
+        sman.src = "favorite_friend.jpg"
+
+        function smango() {
+            document.getElementById("smangodiv").appendChild(sman)
+        }
+
+
+        var hgthi = document.createElement("img");
+        hgthi.src = "hgt.png"
+
+        function hgt() {
+            document.getElementById("hgtdiv").appendChild(hgthi)
+        }
+    </script>
+</head>
+<body>
+    <div style="color: red;">
+        <h1>website</h1>
+    </div>
+
+    <div id="smangodiv">
+        <input type="button" id="smango" value="smango" onmousedown="return smango()"/>
+    </div>
+
+    <br />
+
+    <div id="hgtdiv">
+        <input type="button" id="hgt" value="hgt" onmousedown="return hgt()"/>
+    </div>
+</body>
+</html>
